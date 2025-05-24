@@ -1,0 +1,17 @@
+{
+	"name": "nix.playground",
+	"image":"mcr.microsoft.com/devcontainers/base:debian",
+	"features": {
+		"ghcr.io/devcontainers/features/nix:1": {
+		  "multiUser": true,
+		  "version": "latest"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+			]
+		}
+	}
+}
