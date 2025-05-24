@@ -1,0 +1,5 @@
+{
+    "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+}
