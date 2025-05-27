@@ -1,10 +1,8 @@
-let
-  pkgs = import ./..;
-in
+{ dockerTools, hello }:
 
-pkgs.dockerTools.buildImage {
+dockerTools.buildImage {
   name = "hello-docker";
   config = {
-    Cmd = [ "${pkgs.hello}/bin/hello" ];
+    Cmd = [ "${hello}/bin/hello" ];
   };
 }

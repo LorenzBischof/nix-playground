@@ -5,4 +5,7 @@ let
   };
   pkgs = import tarball { };
 in
-pkgs
+{
+  docker-hello = pkgs.callPackage ./docker-hello { };
+  derivation-hello = pkgs.callPackage ./derivation-hello { };
+}
