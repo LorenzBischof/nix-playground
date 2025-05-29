@@ -5,10 +5,7 @@ let
   };
   pkgs = import tarball { };
 in
-
-pkgs.dockerTools.buildImage {
-  name = "hello-docker";
-  config = {
-    Cmd = [ "${pkgs.hello}/bin/hello" ];
-  };
+{
+  docker-hello = pkgs.callPackage ./docker-hello { };
+  derivation-hello = pkgs.callPackage ./derivation-hello { };
 }
