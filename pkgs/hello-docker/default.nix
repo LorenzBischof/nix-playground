@@ -1,6 +1,9 @@
-{ dockerTools, hello }:
+{
+  dockerTools,
+  hello,
+}:
 
-dockerTools.buildImage {
+dockerTools.buildLayeredImage {
   name = "hello-docker";
   config = {
     Cmd = [ "${hello}/bin/hello" ];
