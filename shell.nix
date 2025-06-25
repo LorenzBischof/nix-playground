@@ -12,5 +12,6 @@ pkgs.mkShellNoCC {
     pkgs.docker-client
     pkgs.nixfmt-rfc-style
     pkgs.nixd
+    pkgs.crane
   ];
 }
