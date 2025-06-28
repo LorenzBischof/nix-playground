@@ -7,11 +7,12 @@ let
 in
 
 pkgs.mkShellNoCC {
-  packages = [
-    pkgs.dive
-    pkgs.docker-client
-    pkgs.nixfmt-rfc-style
-    pkgs.nixd
-    pkgs.crane
+  packages = with pkgs; [
+    dive
+    docker-client
+    nixfmt-rfc-style
+    nixd
+    crane
+    sbomnix
   ];
 }
